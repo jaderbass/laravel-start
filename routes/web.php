@@ -7,26 +7,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function() {
+Route::get('/login', function () {
     return 'Login';
 });
 
-Route::get('/user/{name}', function($name) {
+Route::get('/user/{name}', function ($name) {
     return 'Hallo ' . $name;
 });
 
-Route::get( '/data', function() {
+Route::get('/data', function () {
     return ['firstname' => 'Jörg', 'lastname' => 'Aderhold'];
 });
 
-Route::get( '/user', function() {
+Route::get('/user', function () {
     $id = request('id');
     return 'Hallo, Deine ID lautet: ' . $id;
 });
 
 // Phase 2
 
-Route::get( '/user', function() {
+Route::get('/user', function () {
     return view('user', [
         'id' => request('id')
     ]);
@@ -37,7 +37,7 @@ Route::get( '/user', function() {
 Route::get('/infos', [InfosController::class, 'show']);
 
 // Arbeit mit Views
-Route::get( '/kommentar', function() {
+Route::get('/kommentar', function () {
     $comment = 'Hier ist alles <strong>super</strong>!';
     return view('comments', [
         'comment' => $comment,
@@ -48,10 +48,10 @@ Route::get( '/kommentar', function() {
 
 /* === Master- / Child-Templates
 ============================================================================================= */
-Route::get( '/child', function() {
+Route::get('/child', function () {
     return view('child');
 });
-Route::get( '/sibling', function() {
+Route::get('/sibling', function () {
     return view('sibling');
 });
 
