@@ -8,10 +8,10 @@
 </head>
 <body>
   <nav>
-    <a href="start">Start</a> |
-    <a href="register">Registrierung</a> |
-    <a href="login">Login</a> |
-    <a href="logout">Logout</a>
+    <a href="/start">Start</a> |
+    <a href="/register">Registrierung</a> |
+    <a href="/login">Login</a> |
+    <a href="/logout">Logout</a>
   </nav>
   <h1>Laravel</h1>
 
